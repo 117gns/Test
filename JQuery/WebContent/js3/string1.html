@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.3.1.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		// 대상 파일	$(대상).함수()		$.함수(대상변수,)	$.함수(대상파일,)
+		$.ajax('string1.jsp',{
+			success: function(data){
+				// alert(data);
+				// body 태그 뒷부분에 추가 data 변수 내용 추가
+				$('body').append(data);
+			}
+		});
+		// 버튼을 클릭하면 string1-1.jsp 내용을 가져와서 div 태그 뒷부분에 붙이기
+		$('#btn').click(function(){
+			$.ajax('string1-1.jsp',{
+// 				div_data: {name:"홍길동",age:21},
+				success: function(div_data){
+					$('div').append(div_data);
+				}
+			});
+			$(this).unbind();
+		});
+		
+	});
+</script>
+</head>
+<body>
+<!-- js3/string1.html -->
+<input type="button" value="버튼" id="btn">
+<div>내용</div>
+</body>
+</html>

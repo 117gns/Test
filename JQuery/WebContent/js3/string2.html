@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.3.1.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		// string2.jsp 에
+		// 파라미터 값 넘겨서 data: {name:"홍길동",age:21},
+		// 결과 받아서 body 태그 뒷부분에 추가
+		$.ajax('string2.jsp',{
+			data: {name:"홍길동",age:21},
+			success: function(data){
+				$('body').append(data);
+			}
+		});
+	});
+</script>
+</head>
+<body>
+<!-- js3/string2.html -->
+</body>
+</html>

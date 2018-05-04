@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.3.1.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		// 'xml.jsp' 파일 가져오기
+		// 'body' 뒷부분에 출력
+		$.ajax('xml.jsp',{
+			success: function(data){
+				$(data).find('person').each(function(){
+					var id = $(this).find('id').text();
+					var pass = $(this).find('pass').text();
+					var name = $(this).find('name').text();
+					
+					$('body').append(id+","+pass+","+name+"<br>");
+				});
+			}
+		});
+	});
+</script>
+</head>
+<body>
+<!-- js3/xml.html -->
+</body>
+</html>
