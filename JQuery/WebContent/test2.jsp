@@ -10,5 +10,6 @@
 <%="text2.jsp" %>
 <%="text github" %>
 <%="text2 local" %>
+<%="test2 world" %>
 </body>
 </html>
