@@ -8,5 +8,6 @@
 </head>
 <body>
 <%="text2.jsp" %>
+<%="text github" %>
 </body>
 </html>
