@@ -8,5 +8,6 @@
 </head>
 <body>
 <%="text2.jsp" %>
+<%="text2 local" %>
 </body>
 </html>
